@@ -1,49 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- 
-TODO: Change the background color for each device
-[lightsalmon] Mobile Devices: 319px — 480px
-[powderblue] iPads and Tablets: 481px — 1200px
-[limegreen] Laptops: 1201px — 1600px
-[seagreen] Desktops: 1601px and more
--->
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-  <title>Media Query</title>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    @media (min-width: 319px) and (max-width: 480px){
-      body {
-        background-color: lightsalmon;
-      }
+    body {
+      font-family: 'Sono', sans-serif;
     }
 
-    @media (min-width: 481px) and (max-width: 1200px){
-      body{
-        background-color: powderblue;
-      }
-    }
-
-    @media (min-width: 1201px) and (max-width: 1600px){
-      body{
-        background-color: limegreen;
-      }
-    }
-
+    .pricing-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 1rem;
       
-    @media (min-width: 1601px) {
-      body {
-        background-color: seagreen;
-      }
     }
-    
-    
+
+    .pricing-plan {
+      flex: 1;
+      max-width: 400px;
+      padding: 40px;
+      background-color: blanchedalmond;
+      color: chocolate;
+      border-radius: 50%;
+      text-align: center;
+      border: 10px double orange;
+    }
+
+    .plan-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .plan-price {
+      font-size: 55px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .plan-features {
+      font-size: smaller;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .plan-features li {
+      margin-bottom: 20px;
+    }
+
+    .plan-button {
+      padding: 20px;
+      background-color: purple;
+      color: burlywood;
+      border-radius: 5px;
+      border: none;
+      font-size: large;
+    }
+
 
    
+    /* Hint: What can you do with a media query and flexbox? */
+    @media (max-width: 1000px) {
+      
+    }
+    
   </style>
 </head>
 
 <body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title"><b>Basic</b></div>
+      <div class="plan-price"><p>$9.99/month</p></div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title"><b>Standard</b></div>
+      <div class="plan-price"><p>$19.99/month</p></div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title"><b>Premium</b></div>
+      <div class="plan-price"><p>$49.99/month</p></div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">Sign Up</a>
+    </div>
+  </div>
+
 </body>
+
+</html>
